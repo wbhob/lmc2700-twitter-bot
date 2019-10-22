@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "typeRoots": ["node_modules/@types"], "outDir": "dist" },
+  "include": ["bot.ts"]
+}
