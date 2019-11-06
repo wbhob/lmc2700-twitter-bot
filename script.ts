@@ -36,11 +36,12 @@ async function generateNewTweet() {
 // This function finds the latest tweet with the #mediaarts hashtag, and retweets it.
 async function retweetLatest() {
   try {
-    const data: any = await T.get('search/tweets', oasisSearch)
+    const { data } = (await T.get('search/tweets', oasisSearch)) as any
 
     // If our search request to the server had no errors...
 
     // ...then we grab the ID of the tweet we want to retweet...
+    console.log(data.statuses)
     var in_reply_to_status_id = data.statuses[0].id_str
     var in_reply_to_user = data.statuses[0].user.screen_name
     // ...and then we tell Twitter we want to retweet it!
@@ -76,4 +77,4 @@ async function retweetLatest() {
 retweetLatest()
 // ...and then every hour after that. Time here is in milliseconds, so
 // 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60
-setInterval(retweetLatest, 1000 * 60 * 60)
+setInterval(retweetLatest, 1000 * 60 * 30)

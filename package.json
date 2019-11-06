@@ -4,7 +4,7 @@
   "description": "This bot retweets the latest tweet using the \"#mediaarts\" hashtag. It attempts to retweet once per hour.",
   "main": "bot.js",
   "scripts": {
-    "start": "node dist/bot.js",
+    "start": "node script.js",
     "build": "tsc",
     "test": "tsc"
   },
