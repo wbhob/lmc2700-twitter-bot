@@ -91,5 +91,5 @@ async function retweetLatest() {
 // Try to retweet something as soon as we run the program...
 retweetLatest()
 // ...and then every hour after that. Time here is in milliseconds, so
-// 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 30 = 1/2 hour --> 1000 * 60 * 30
-setInterval(retweetLatest, 1000 * 60 * 30)
+// 1000 ms = 1 second, 1 sec * 60 = 1 min, 1 min * 60 = 1 hour --> 1000 * 60 * 60 *2 = 2 hours
+setInterval(retweetLatest, 1000 * 60 * 60 * 2)
