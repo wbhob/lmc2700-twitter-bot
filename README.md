@@ -19,3 +19,9 @@ First, put the training data in `model.txt`, separating each bit of data by a ne
 ## Running the Bot
 
 Set keys in the config.ts file, OR just run `npm start` which will use a safe-start command to set environment variables. For this project, I've included the keys for safe-start, but in practice, I would remove the keys before pushing to source control.
+
+## Example Demo:
+
+https://twitter.com/OasisYepThatsMe
+
+Generated from lyrics from all major Oasis albums and tweets on a two hour basis.
